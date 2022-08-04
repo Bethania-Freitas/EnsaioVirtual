@@ -39,7 +39,8 @@ class StoreUpdateUserFormRequest extends FormRequest
                 'max:12'
             ],
             'image' => [
-                'file', 
+                'driver' => 'local',
+                'root'   => public_path(), 
             ],
         ];
 

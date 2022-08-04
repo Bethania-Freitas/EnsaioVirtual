@@ -47,7 +47,7 @@ class UserController extends Controller
 
 
         if ($request->image) {
-            $data['image'] = $request->image->store('profile', 'public');
+            $data['image'] = $request->image->store('users', ['disk' => 'images']);
         }
 
         $this->model->create($data);
